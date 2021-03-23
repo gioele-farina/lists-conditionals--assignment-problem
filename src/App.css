@@ -1,0 +1,15 @@
+.App {
+  margin: 16px;
+}
+
+.charComponentsList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.charEmpty {
+  background-color: #ff4d4d;
+}
+.charFull {
+  background-color: lightgreen;
+}
