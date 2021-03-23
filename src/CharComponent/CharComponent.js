@@ -15,6 +15,7 @@ const charComponent = (props) => {
         ? <span>{props.letter}</span>
         : <span></span>
       }
+      <div className="destroyChar" onClick={props.destroy}>x</div>
     </div>
   );
 }

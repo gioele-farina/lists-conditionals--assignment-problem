@@ -21,11 +21,20 @@ class App extends Component {
     return this.state.inputText.length;
   }
 
+  destroyHandler = (charIndex) => {
+    let letters = [...this.state.inputText.slice()];
+    letters.splice(charIndex, 1);
+    letters = letters.join('');
+    this.setState({
+      inputText: letters,
+    });
+  }
+
   render() {
 
     let charComponentsList = this.state.inputText.split('').map((letter, index) => {
       return (
-        <CharComponent letter={letter} key={index} />
+        <CharComponent letter={letter} key={index} destroy={() => this.destroyHandler(index)}/>
       );
     });
 
