@@ -49,11 +49,10 @@ class App extends Component {
           <p>The text length is: {this.getTextLength()}</p>
         </div>
 
-        <ValidationComponent textLength={this.getTextLength()}/>
-
-        <div className="charComponentsList">
-          {charComponentsList}
-        </div>
+        <ValidationComponent
+          textLength={this.getTextLength()}
+          charComponentsList={charComponentsList}
+        />
 
       </div>
     );
